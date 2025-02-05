@@ -1,2 +1,2 @@
-Mozi Projekt\
-Határidő: febr. 19. 23:59
+🍿**Mozi Projekt**🍿\
+🕐Határidő: febr. 19. 23:59🕐

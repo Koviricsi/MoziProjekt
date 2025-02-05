@@ -1,6 +1,6 @@
 🍿**Mozi Projekt**🍿\
 \
-🕐Határidő: febr. 19. 23:59\
+🕐Határidő: 2025. febr. 19. 23:59\
 \
 🧑Tagok:\
 -Horváth Kevin\

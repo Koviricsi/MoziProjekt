@@ -5,16 +5,16 @@
 🧑Tagok:\
 -Horváth Kevin\
 -Kövi Richárd\
--Katona-Tóth Márton
-
-Oldalak:
--Főoldal    -Kevin
--Átmeneti oldal (film infók)    -Csömbi
--Foglalás   -Ricsi
-    →Jegy vásárlás
--Ajándékkártya  -Kevin, Csömbi
--Fizetés    -Ricsi
-    →Kupon
-
-
--Navbar, footer (Ricsi)
+-Katona-Tóth Márton\
+\
+Oldalak:\
+-Főoldal    -Kevin\
+-Átmeneti oldal (film infók)    -Csömbi\
+-Foglalás   -Ricsi\
+    →Jegy vásárlás\
+-Ajándékkártya  -Kevin, Csömbi\
+-Fizetés    -Ricsi\
+    →Kupon\
+\
+\
+-Navbar, footer (Ricsi)\

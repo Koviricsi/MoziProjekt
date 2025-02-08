@@ -11,6 +11,7 @@ html, body{
     --black: rgb(0,0,0);
     --white: rgb(255,255,255);
     --darkgray: rgb(30, 30, 30);
+    --silver: rgb(150, 150, 150);
     --purple: rgb(150, 0, 180);
     --lightblue: rgb(120, 210, 240);
     --blue: rgb(50, 120, 200);
@@ -42,8 +43,8 @@ header{
         inset -50vw 0 0 0 var(--lightblue);
     animation-name: deployheader;
     animation-timing-function: ease;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
     animation-fill-mode: forwards;
     z-index: 10;
 
@@ -66,7 +67,6 @@ nav{
     grid-template-columns: 1fr 1fr 2fr 0.5fr;
     grid-template-rows: 1fr;
     height: max-content;
-    min-height: 50px;
     align-items: center;
     background-color: var(--darkgray);
     border-top: solid var(--white) 0.1cqh;
@@ -133,6 +133,34 @@ nav{
 
     }
 
+}
+
+footer{
+    height: max-content;
+    min-height: 100px;
+    background-color: var(--darkgray);
+    border-top: solid var(--white) 0.2cqh;
+    place-items: center;
+
+    >div{
+        min-width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            color: var(--white);
+            font-family: 'Karla', serif;
+        }
+
+    }
+
+}
+
+.now{
+    color: transparent;
+    background-image: linear-gradient(var(--purple), var(--lightblue));
+    background-clip: text;
+    font-variation-settings: 'FILL' 1 !important;
 }
 
 

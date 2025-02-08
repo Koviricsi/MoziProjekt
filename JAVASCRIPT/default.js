@@ -4,7 +4,7 @@ let height = parseFloat(window.getComputedStyle(nav).height) * navprogress;
 let navTime = null;
 navAnimate();
 
-setTimeout(function(){navTime = setInterval(navAnimate, 10)}, 1550)
+setTimeout(function(){navTime = setInterval(navAnimate, 5)}, 800)
 
 function navAnimate(){
     let height = Math.round(parseFloat(window.getComputedStyle(nav).height) * navprogress);
@@ -15,4 +15,3 @@ function navAnimate(){
     }
     navprogress -= 0.01;
 }
-

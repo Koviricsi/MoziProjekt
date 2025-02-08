@@ -1,0 +1,195 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkblue);
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+:root{
+    --black: rgb(0,0,0);
+    --white: rgb(255,255,255);
+    --darkgray: rgb(30, 30, 30);
+    --purple: rgb(150, 0, 180);
+    --lightblue: rgb(120, 210, 240);
+    --blue: rgb(50, 120, 200);
+    --darkblue: rgb(0, 10, 50);
+
+    --tiny-size: calc(1rem + 0.1cqw - 0.2cqh);
+    --small-size: calc(1rem + 0.2cqw - 0.2cqh);
+    --medium-size: calc(1rem + 0.3cqw - 0.2cqh);
+    --large-size: calc(1rem + 0.6cqw - 0.2cqh);
+    --xlarge-size: calc(1rem + 0.8cqw - 0.2cqh);
+}
+
+header{
+    height: 30vh;
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0.5cqw;
+    box-shadow: 
+        inset 40vw 0 0 0 var(--darkgray),
+        inset 48vw 0 0 0 var(--purple), 
+        inset 50vw 0 0 0 var(--lightblue),
+        
+        inset -40vw 0 0 0 var(--darkgray),
+        inset -48vw 0 0 0 var(--purple),
+        inset -50vw 0 0 0 var(--lightblue);
+    animation-name: deployheader;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+
+    img{
+        width: calc((50cqw + 50cqh) / 2);
+        min-width: 50%;
+        aspect-ratio: 2/1;
+        opacity: 0;
+        animation-name: deploylogo;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+nav{    
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 0.5fr;
+    grid-template-rows: 1fr;
+    height: max-content;
+    align-items: center;
+    background-color: var(--darkgray);
+    font-family: "Rubik", serif;
+    color: var(--white);
+    box-shadow: 
+        inset 0 -106vh 0 0 var(--darkgray), 
+        inset 0 0 0 0 var(--white), 
+        inset 0 -108vh 0 0 var(--purple), 
+        inset 0 -110vh 0 0 var(--lightblue);
+    animation-name: deploynavbar;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    z-index: 100;
+
+    section:last-child{
+        grid-column: 4;
+    }
+
+    section{
+        place-content: center;
+        text-align: center;
+        height: 100%;
+        margin-block: 0.6cqh;
+        opacity: 0;
+        animation-name: deploysections;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        
+        div{
+            padding-bottom: 0.5cqh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            span:first-child{
+                font-size: var(--medium-size);
+            }
+
+            span:last-child{
+                font-size: var(--tiny-size);
+            }
+
+            span{
+                transition: all 0.3s;
+                flex-grow: 1;
+            }
+
+        }
+
+        &:hover{
+            cursor: pointer;
+            div{
+                span:first-child{
+                    font-size: var(--xlarge-size);
+                }
+
+                span:last-child{
+                    font-size: 0;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@keyframes deployheader {
+    0%{box-shadow: 
+        inset 40vw 0 0 0 var(--darkgray),
+        inset 48vw 0 0 0 var(--purple), 
+        inset 50vw 0 0 0 var(--lightblue),
+        
+        inset -40vw 0 0 0 var(--darkgray),
+        inset -48vw 0 0 0 var(--purple),
+        inset -50vw 0 0 0 var(--lightblue);
+    }
+    100%{box-shadow: 
+        inset 0vw 0 0 0 var(--darkgray),
+        inset 0.25cqw 0 0 0 var(--purple), 
+        inset 0.5cqw 0 0 0 var(--lightblue),
+
+        inset -0vw 0 0 0 var(--darkgray),
+        inset -0.25cqw 0 0 0 var(--purple),
+        inset -0.5cqw 0 0 0 var(--lightblue);
+    }
+}
+
+@keyframes deploylogo {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes deploynavbar {
+    0%{
+        box-shadow: 
+            inset 0 -106vh 0 0 var(--darkgray), 
+            inset 0 0 0 0 var(--white), 
+            inset 0 -108vh 0 0 var(--purple), 
+            inset 0 -110vh 0 0 var(--lightblue);
+    }
+    100%{
+        box-shadow: 
+            inset 0 0cqh 0 0 var(--darkgray), 
+            inset 0 0.2cqh 0 0 var(--white), 
+            inset 0 -0.4cqh 0 0 var(--purple), 
+            inset 0 -0.8cqh 0 0 var(--lightblue);
+    }
+}
+
+@keyframes deploysections {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

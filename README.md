@@ -17,4 +17,6 @@ Oldalak:\
     →Kupon\
 \
 \
--Navbar, footer (Ricsi)
+-Navbar, footer (Ricsi)\
+\
+https://koviricsi.github.io/MoziProjekt/HTML/default.html

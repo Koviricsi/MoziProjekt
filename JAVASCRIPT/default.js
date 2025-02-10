@@ -64,4 +64,4 @@ setInterval(function(){
         },10)
     }
     
-}, 1000)
+}, 1100)

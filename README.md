@@ -17,4 +17,4 @@ Oldalak:\
     →Kupon\
 \
 \
--Navbar, footer (Ricsi)\
+-Navbar, footer (Ricsi)

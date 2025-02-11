@@ -1,0 +1,295 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkblue);
+    box-sizing: border-box;
+}
+
+:root{
+    --black: rgb(0,0,0);
+    --white: rgb(255,255,255);
+    --darkgray: rgb(30, 30, 30);
+    --silver: rgb(150, 150, 150);
+    --purple: rgb(150, 0, 180);
+    --lightblue: rgb(120, 210, 240);
+    --blue: rgb(50, 120, 200);
+    --darkblue: rgb(0, 10, 50);
+
+    --tiny-size: calc(1rem + 0.1cqw - 0.2cqh);
+    --small-size: calc(1rem + 0.2cqw - 0.2cqh);
+    --medium-size: calc(1rem + 0.4cqw - 0.2cqh);
+    --large-size: calc(1rem + 0.6cqw - 0.2cqh);
+    --xlarge-size: calc(1rem + 0.8cqw - 0.2cqh);
+    --xxlarge-size: calc(1rem + 1.2cqw);
+    --xxxlarge-size: calc(1rem + 2.5cqw);
+}
+
+header{
+    height: 30vh;
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0.5cqw;
+    box-shadow: 
+        inset 40vw 0 0 0 var(--darkgray),
+        inset 48vw 0 0 0 var(--purple), 
+        inset 50vw 0 0 0 var(--lightblue),
+        
+        inset -40vw 0 0 0 var(--darkgray),
+        inset -48vw 0 0 0 var(--purple),
+        inset -50vw 0 0 0 var(--lightblue);
+    animation-name: deployheader;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../!forras/kep/headerbg.jpg);
+    background-size: cover;
+    background-position: center;
+
+    span{
+        font-family: 'Workbench', serif;
+        font-size: var(--xxxlarge-size);
+        color: var(--white);
+        letter-spacing: 0.5cqw;
+        animation-name: deploylogo;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    .popcorn{
+        position: absolute;
+        aspect-ratio: 1/1;
+        width: 3cqw;
+        rotate: 30deg;
+        z-index: -1;
+        animation-name: deploylogo;
+        animation-duration: 4s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+}
+
+nav{    
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 0.5fr;
+    grid-template-rows: 1fr;
+    height: max-content;
+    align-items: center;
+    background-color: var(--darkgray);
+    border-top: solid var(--white) 0.1cqh;
+    font-family: "Rubik", serif;
+    color: var(--white);
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    transition: all 0.2s;
+
+    section:last-child{
+        grid-column: 4;
+    }
+
+    section{
+        place-content: center;
+        text-align: center;
+        height: 100%;
+        margin-block: 0.6cqh;
+        opacity: 0;
+        animation-name: deploysections;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        
+        div{
+            padding-bottom: 0.5cqh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            span:first-child{
+                font-size: var(--medium-size);
+                font-variation-settings: 'FILL' 0;
+            }
+
+            span:last-child{
+                font-size: var(--tiny-size);
+            }
+
+            span{
+                transition-property: all;
+                transition-duration: 0.3s;
+                transition-behavior: allow-discrete;
+                opacity: 1;
+                flex-grow: 1;
+            }
+
+        }
+
+        &:hover{
+            cursor: pointer;
+            div{
+                span:first-child{
+                    font-size: var(--xlarge-size);
+                    font-variation-settings: 'FILL' 1;
+                }
+
+                span:last-child{
+                    font-size: 0;
+                }
+            }
+        }
+
+    }
+
+}
+
+footer{
+    height: max-content;
+    min-height: 100px;
+    background-color: var(--darkgray);
+    border-top: solid var(--white) 0.2cqh;
+    place-items: center;
+
+    >div{
+        min-width: 35%;
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            color: var(--white);
+            font-size: var(--medium-size);
+            font-family: 'Karla', serif;
+            margin-top: 2cqh;
+        }
+
+        div{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 2cqh;
+
+            span{
+                font-family: 'Lexend Deca', serif;
+            }
+
+            span:nth-child(odd){
+                color: var(--white);
+                font-size: var(--small-size);
+            }
+
+            span:nth-child(even){
+                background-image: linear-gradient(120deg, var(--purple), var(--lightblue));
+                background-clip: text;
+                color: transparent;
+                font-size: var(--tiny-size);
+                font-weight: 900;
+                letter-spacing: 0.1cqw;
+                text-align: right;
+            }
+
+        }
+
+    }
+
+}
+
+.now{
+    color: transparent;
+    background-image: linear-gradient(-30deg, var(--purple), var(--lightblue));
+    background-clip: text;
+    font-variation-settings: 'FILL' 1 !important;
+}
+
+
+@keyframes deployheader {
+    0%{box-shadow: 
+        inset 40vw 0 0 0 var(--darkgray),
+        inset 48vw 0 0 0 var(--purple), 
+        inset 50vw 0 0 0 var(--lightblue),
+        
+        inset -40vw 0 0 0 var(--darkgray),
+        inset -48vw 0 0 0 var(--purple),
+        inset -50vw 0 0 0 var(--lightblue);
+    }
+    100%{box-shadow: 
+        inset 0vw 0 0 0 var(--darkgray),
+        inset 0.25cqw 0 0 0 var(--purple), 
+        inset 0.5cqw 0 0 0 var(--lightblue),
+
+        inset -0vw 0 0 0 var(--darkgray),
+        inset -0.25cqw 0 0 0 var(--purple),
+        inset -0.5cqw 0 0 0 var(--lightblue);
+    }
+}
+
+@keyframes deploylogo {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes deploysections {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+
+@media screen and (width < 768px) {
+    nav{
+        section{
+            div{
+                span:first-child{
+                    font-size: var(--xxlarge-size);
+                }
+
+                span:last-child{
+                    display: none;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    footer{
+        >div{
+
+            h3{
+                text-align: center;
+            }
+
+            div{
+                grid-template-columns: repeat(1, 1fr);
+                
+                span:nth-child(odd){
+                    text-align: center;
+                    margin-top: 0.5cqh;
+                }
+
+                span:nth-child(even){
+                    text-align: center;
+                    letter-spacing: revert;
+                }
+            }
+        }
+    }
+}

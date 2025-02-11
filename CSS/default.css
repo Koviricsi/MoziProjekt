@@ -23,6 +23,7 @@ html, body{
     --large-size: calc(1rem + 0.6cqw - 0.2cqh);
     --xlarge-size: calc(1rem + 0.8cqw - 0.2cqh);
     --xxlarge-size: calc(1rem + 1.2cqw);
+    --xxxlarge-size: calc(1rem + 2.5cqw);
 }
 
 header{
@@ -49,18 +50,20 @@ header{
     z-index: 10;
     position: relative;
     overflow: hidden;
+    background-image: url(../!forras/kep/headerbg.jpg);
+    background-size: cover;
+    background-position: center;
 
-    img:first-child{
-        width: calc((50cqw + 50cqh) / 2);
-        min-width: 50%;
-        aspect-ratio: 2/1;
-        opacity: 0;
+    span{
+        font-family: 'Workbench', serif;
+        font-size: var(--xxxlarge-size);
+        color: var(--white);
+        letter-spacing: 0.5cqw;
         animation-name: deploylogo;
-        animation-timing-function: ease;
-        animation-duration: 1s;
+        animation-duration: 2s;
         animation-delay: 1s;
         animation-fill-mode: forwards;
-        filter: brightness(100) blur(0.5px);
+        opacity: 0;
     }
 
     .popcorn{
@@ -69,6 +72,11 @@ header{
         width: 3cqw;
         rotate: 30deg;
         z-index: -1;
+        animation-name: deploylogo;
+        animation-duration: 4s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+        opacity: 0;
     }
 
 }

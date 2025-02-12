@@ -305,10 +305,11 @@ footer{
   }
   
   .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: var(--darkgray);
     text-align: center;
     padding: 20px;
     font-size: 30px;
+    color: var(--white);
   }
   
   .item1 {
@@ -371,10 +372,11 @@ footer{
       scale(0.9, 0.9);
     border-radius: 20px;
     border: 5px solid var(--purple);
-    box-shadow: 0 20px 30px -20px var(--blue);
+    box-shadow: 0 20px 30px -10px var(--blue);
     transition: 0.4s ease-in-out transform;
   
     &:hover {
       transform: translate3d(0px, 0px, -250px);
     }
   }
+

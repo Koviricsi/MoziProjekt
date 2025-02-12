@@ -76,7 +76,7 @@ for (let i = 0; i < popcorns.length; i++){
     popcorns[i].style.left = Math.random()*90 + "%";
     popcorns[i].style.top = Math.random()*90 + "%";
     popcorns[i].style.rotate = Math.random()*300 + "deg";
-    popcorns[i].style.scale = Math.random()*1.5+0.5;
+    popcorns[i].style.scale = 0.8 + Math.random();
 }
 
 let popcorn_vectors = [];

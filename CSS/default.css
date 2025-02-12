@@ -1,3 +1,37 @@
+*::selection{
+    background-color: var(--silver);
+}
+
+::-webkit-scrollbar{
+    width: 1vw;
+    border-left: solid 1cqw var(--white);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--darkgray);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--purple);
+    border-left: solid var(--darkgray) 0.4cqw;
+    border-right: solid var(--lightblue);
+    border-block: solid var(--darkgray);
+    border-top-left-radius: 0.8cqw;
+    border-bottom-left-radius: 0.8cqw;
+}
+::-webkit-scrollbar-corner{
+    background-color: var(--lightblue);
+}
+::-webkit-scrollbar-button{
+    height: 1vw;
+    background-color: var(--lightblue);
+    background-size: cover;
+}
+::-webkit-scrollbar-button:start{
+    background-image: url(../!forras/kep/keyboard_arrow_up_50dp_1E1E1E_FILL0_wght400_GRAD0_opsz48.svg);
+}
+::-webkit-scrollbar-button:end{
+    background-image: url(../!forras/kep/keyboard_arrow_down_50dp_1E1E1E_FILL0_wght400_GRAD0_opsz48.svg);
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -22,14 +56,13 @@ html, body{
     --medium-size: calc(1rem + 0.4cqw - 0.2cqh);
     --large-size: calc(1rem + 0.6cqw - 0.2cqh);
     --xlarge-size: calc(1rem + 0.8cqw - 0.2cqh);
-    --xxlarge-size: calc(1rem + 1.2cqw);
-    --xxxlarge-size: calc(1rem + 2.5cqw);
+    --xxlarge-size: calc(1rem + 1.5cqw);
+    --xxxlarge-size: calc(1rem + 3cqw);
 }
 
 header{
-    height: 30vh;
     width: 100%;
-    min-height: fit-content;
+    max-height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +97,7 @@ header{
         animation-delay: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
+        margin-block: 5ch;
     }
 
     .popcorn{
@@ -255,11 +289,19 @@ footer{
 
 
 @media screen and (width < 768px) {
+    header{
+        span{
+            font-size: calc(var(--xxxlarge-size) + var(--small-size));
+            text-align: center;
+            margin-inline: 2cqw;
+        }
+    }
     nav{
         section{
             div{
                 span:first-child{
-                    font-size: var(--xxlarge-size);
+                    font-size: var(--xxxlarge-size);
+                    margin-block: 0.4ch;
                 }
 
                 span:last-child{

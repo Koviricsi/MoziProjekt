@@ -64,7 +64,7 @@ div > h2{
     margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
-    animation: 5s csussz infinite linear;
+    animation: 15s csussz infinite linear;
 }
 
 
@@ -75,11 +75,11 @@ div > h2{
     margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
-    animation: 5s csussz infinite linear;
+    animation: 15s csussz infinite linear;
 }
 
 .vissza{
-    animation: 5s csussz infinite linear reverse;
+    animation: 15s csussz infinite linear reverse;
 }
 
 @keyframes csussz {

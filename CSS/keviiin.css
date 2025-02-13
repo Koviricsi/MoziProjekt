@@ -2,12 +2,8 @@ html, body{
     overflow-x: hidden;
 }
 
-
-
-
-
-.szalag-container:nth-child(even) {
-    direction: rtl;
+.szalag-container{
+    display: flex;
 }
 
 .szalag {
@@ -16,9 +12,7 @@ html, body{
     background-color: var(--darkgray);
     padding: 0;
     margin-top: 100px;
-    max-width: 100%;
-    flex: 0 0 calc(100vw/3);
-
+    width: calc(100vw/3);
 }
 
 
@@ -30,7 +24,7 @@ html, body{
 }
 
 .kisdoboz .small {
-    width: 40px;
+    width: 10%;
     height: 20px;
     background-color: var(--lightblue);
     border: 2px solid var(--purple);
@@ -38,7 +32,7 @@ html, body{
 }
 
 .nagydoboz .nagy {
-    width: 500px;
+    width: 75%;
     height: 350px;
     background-color: var(--lightblue);
     border-radius: 10px;
@@ -70,7 +64,10 @@ div > h2{
     margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
+    animation: 5s csussz infinite linear;
 }
+
+
 
 .masodikdoboz{
     width: 100vw;      
@@ -78,4 +75,18 @@ div > h2{
     margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
+    animation: 5s csussz infinite linear;
+}
+
+.vissza{
+    animation: 5s csussz infinite linear reverse;
+}
+
+@keyframes csussz {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }

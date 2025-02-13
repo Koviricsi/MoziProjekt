@@ -25,10 +25,11 @@ main{
             h2{
                 color: var(--white);
                 font-family: 'Lexend Deca', serif;
+                font-size: var(--large-size);
                 background-color: var(--darkgray);
                 margin: 0;
-                padding-block: 2cqh;
-                padding-inline: 2cqw;
+                padding-block: 3cqh;
+                padding-inline: 4cqw;
                 border-top-left-radius: 1.5cqw;
                 border-top-right-radius: 1.5cqw;
                 position: relative;
@@ -56,21 +57,14 @@ main{
                 border-radius: 1.5cqw;
                 display: grid;
                 gap: 0.5cqw;
+                padding-bottom: 1cqh;
                 grid-template-columns: repeat(16, 3cqw);
                 grid-template-rows: repeat(8, 3cqw);
-                grid-template-areas:
-                ". . . . p p p p p p p p . . . ."
-                ". . . . . . . . . . . . . . . ."
-                ". . . . a1 a2 a3 a4 a5 a6 a7 a8 . . . ."
-                ". . . a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 . . ."
-                ". . a19 a20 a21 a22 a23 a24 a25 a26 a27 a28 a29 a30 . ."
-                ". a31 a32 a33 a34 a35 a36 a37 a38 a39 a40 a41 a42 a43 a44 ."
-                "a45 a46 a47 a48 a49 a50 a51 a52 a53 a54 a55 a56 a57 a58 a59 a60";
                 align-items: center;
                 justify-content: center;
 
                 >div{
-                    grid-area: p;
+                    grid-area: 1/5/1/span 8;
                     height: 10%;
                     background-color: var(--silver);
                     border-bottom: solid 0.1cqh var(--white);
@@ -177,12 +171,20 @@ main{
 
 }
 
-@media screen and (width < 768) {
+@media screen and (width < 768px) {
     main{
         >div:first-child{
-            >section:nth-child(1){
-                h2{
-                    font-size: var(--tiny-size);
+            width: 95%;
+            >section:nth-child(2){
+                >div{
+                    grid-template-columns: repeat(16, 6cqw);
+                    grid-template-rows: repeat(8, 6cqw);
+                    overflow-x: scroll;
+
+                    >section{
+                        font-size: var(--tiny-size);
+                    }
+
                 }
             }
         }

@@ -1,9 +1,20 @@
-let ido = 1;
-let szalagok = document.getElementsByClassName("szalag");
 
 
-for(let i = 0; i < szalagok.length; i++){
-    szalagok[i].style.animationDelay = ido.toString();
-    ido += 1.7;
-    console.log(szalagok[i].style.animationDelay) ;
+
+let dobozok = document.getElementsByClassName("kisdoboz");
+
+for (let i = 0; i < dobozok.length; i++){
+
+    for(let j = 0; j < 14; j++){
+
+        let kisbox = document.createElement("div");
+        kisbox.classList.add("small");
+        dobozok[i].appendChild(kisbox);
+
+    }
+
+
 }
+    
+    
+

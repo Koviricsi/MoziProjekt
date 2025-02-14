@@ -34,7 +34,7 @@ html, body{
 .nagydoboz .nagy {
     width: 75%;
     height: 350px;
-    background-color: var(--lightblue);
+    background-color: var(--darkgray);
     border-radius: 10px;
     border: 3px, solid var(--purple);
 }
@@ -94,16 +94,32 @@ div > h2{
 .nagy > h2 {
     opacity: 0; 
     transition: opacity 1s ease-in-out;
+    padding: 5px;
 }
 
 .nagy:hover > h2  {
     opacity: 1;
+
 }
 
-.nagydoboz:hover {
-    filter: blur(3px);
+.nagy:hover{
+    background-blend-mode: multiply;
+} 
+
+
+
+button {
+    opacity: 0; 
 }
 
-
-
+.nagy:hover > button {
+    opacity: 1;
+    padding: 5% 10%; 
+    font-size: 2cqmin;  
+    border-radius: 5px;  
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--darkgray);
+    border: var(--lightblue) solid 2px;
+}
 

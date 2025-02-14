@@ -90,3 +90,20 @@ div > h2{
         transform: translateX(-100%);
     }
 }
+
+.nagy > h2 {
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+}
+
+.nagy:hover > h2  {
+    opacity: 1;
+}
+
+.nagydoboz:hover {
+    filter: blur(3px);
+}
+
+
+
+

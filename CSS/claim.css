@@ -109,7 +109,7 @@ main {
 
       > div {
         border-radius: 2cqw;
-        padding: 0.5cqw;
+        padding: 1cqw 0.5cqw;
         color: var(--white);
         font-family: "Lexend Deca", serif;
         font-size: var(--medium-size);

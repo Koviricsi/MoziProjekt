@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../CSS/default.css" />
+    <link rel="stylesheet" href="../CSS/after_claim.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +18,7 @@
     />
 
     <script src="../JAVASCRIPT/default.js" defer></script>
+    <script src="../JAVASCRIPT/after_claim.js" defer></script>
     <script
       src="https://kit.fontawesome.com/e0677ef9f1.js"
       crossorigin="anonymous"
@@ -55,8 +57,36 @@
       </section>
     </nav>
 
-    <main style="min-height: 100vh">
-      <!--Az oldal tartalma-->
+    <main>
+      <div id="content">
+        <h1>
+          Köszönjük, hogy a <span>Popcorn Palotát</span> választotta mozizásra!
+        </h1>
+        <p>
+          Kedves Vásárló! Köszönjük, hogy mozijegyet foglalt nálunk! Szeretnénk
+          tájékoztatni, hogy a foglalás csupán a jegyek félretételét jelenti, és
+          nem biztosítja azok automatikus birtoklását. A jegyek végleges
+          megszerzéséhez <span>a foglalást időben ki kell fizetni</span>, akár
+          online, akár a helyszínen. Online vásárlás esetén kérjük, hogy menjen
+          a kosárhoz a fizetéshez. Felhívjuk figyelmét, hogy a film kezdete
+          előtt <span>legalább 1 órával</span> szükséges a jegy kifizetése,
+          különben a foglalás automatikusan törlődik, és a jegy ismét elérhetővé
+          válik más vásárlók számára.
+          <br />
+          <span>Kellemes moziélményt kívánunk!</span>
+        </p>
+        <section>
+          <div onclick="window.location.href = '../HTML/index.html'">
+            <span class="material-symbols-outlined">keyboard_arrow_left</span
+            >Vissza a főoldalra
+          </div>
+          <div>
+            Tovább a kosárhoz<span class="material-symbols-outlined"
+              >keyboard_arrow_right</span
+            >
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer>

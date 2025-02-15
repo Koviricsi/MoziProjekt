@@ -164,3 +164,11 @@ let popcorn_move = setInterval(function () {
 if (localStorage.getItem("tickets") == null){
     localStorage.setItem("tickets", JSON.stringify({}));
 }
+if (window.location.pathname != "/HTML/claim.html"){
+  localStorage.removeItem("numbers");
+  localStorage.removeItem("movie_title");
+}
+
+if (!["/HTML/claim.html", "/HTML/after_claim.html"].includes(window.location.pathname)) {
+  localStorage.removeItem("new");
+}

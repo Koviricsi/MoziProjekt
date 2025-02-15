@@ -6,11 +6,20 @@ function ChairManager() {
     let chair = document.createElement("section");
     let tickets = JSON.parse(localStorage.getItem("tickets"));
     let title = localStorage.getItem("movie_title");
+    let claimed = false;
     chair.style.gridArea = i + "/" + j;
     chair.setAttribute("number", number);
     chair.innerHTML = number;
-
+    for (let i = 0; i < tickets[title][0].length; i++) {
+      if (tickets[title][0][i].includes(number)) {
+        claimed = true;
+      }
+    }
     if (tickets[title][1].includes(number)) {
+      claimed = true;
+    }
+
+    if (claimed) {
       chair.style.filter = "grayscale(1)";
       chair.style.cursor = "not-allowed";
     } else {
@@ -81,8 +90,10 @@ function Places(num, chair) {
 function ClaimPlaces(button) {
   let storage = JSON.parse(localStorage.getItem("numbers"));
   if (storage.length > 0) {
-    TicketManager();
-    window.location.href = "../HTML/after_claim.html";
+    if (confirm("Biztosan le akarja foglalni a "+storage.join(", ")+" számú hely(ek)et?")) {
+      TicketManager();
+      window.location.href = "../HTML/after_claim.html";
+    }
   } else {
     alert("Kérjük, először válasszon hely(ek)et a foglaláshoz!");
   }
@@ -97,6 +108,7 @@ function TicketManager() {
 
   tickets[title][0].push(numbers);
   localStorage.setItem("tickets", JSON.stringify(tickets));
+  localStorage.setItem("new", title);
 }
 
 window.onload = Title();

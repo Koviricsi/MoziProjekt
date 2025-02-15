@@ -108,17 +108,20 @@ main {
       }
 
       > div {
-        padding: 1cqw;
         border-radius: 2cqw;
+        padding: 0.5cqw;
         color: var(--white);
         font-family: "Lexend Deca", serif;
         font-size: var(--medium-size);
         position: relative;
         text-align: center;
-        flex-grow: 0.5;
+        flex-grow: 0.1;
         cursor: pointer;
         background-color: var(--darkgray);
         transition: all 0.2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       > div:first-child {

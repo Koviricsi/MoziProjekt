@@ -1,10 +1,19 @@
 html, body{
     overflow-x: hidden;
-    background-image: url(../!forras/kep/hatterindexnek.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
+.szalag-container{
+    display: flex;
+}
+
+.szalag {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkgray);
+    padding: 0;
+    margin-top: 100px;
+    width: calc(100vw/3);
+}
 
 
 
@@ -12,7 +21,6 @@ html, body{
     display: flex;
     justify-content: center;
     gap: 5px;
-
 }
 
 .kisdoboz .small {
@@ -21,7 +29,6 @@ html, body{
     background-color: var(--lightblue);
     border: 2px solid var(--purple);
     border-radius: 5px;
-    min-width: 20px;
 }
 
 .nagydoboz .nagy {
@@ -33,16 +40,14 @@ html, body{
 }
 
 .nagydoboz {
-    gap: 30px;
+    gap: 50px;
     padding: 20px;
-    transition: all 0.2s;
 }
 
 .kisdoboz {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 5px;
-
 }
 
 
@@ -53,11 +58,38 @@ div > h2{
 }
 
 
+.elsodoboz{
+    width: 100vw;      
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    animation: 15s csussz infinite linear;
+}
 
 
 
+.masodikdoboz{
+    width: 100vw;      
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    animation: 15s csussz infinite linear;
+}
 
+.vissza{
+    animation: 15s csussz infinite linear reverse;
+}
 
+@keyframes csussz {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 .nagy > h2 {
     opacity: 0; 
@@ -78,7 +110,7 @@ div > h2{
 
 button {
     opacity: 0; 
-    transition: all 0.2s;
+
 }
 
 
@@ -93,7 +125,7 @@ button {
     color: var(--white);
     background-color: var(--darkgray);
     border: var(--lightblue) solid 2px; 
-    
+
 }
 
 
@@ -104,11 +136,4 @@ button {
     align-items: center;
 }
 
-
-
-.nagy > button:hover{
-    background-color: var(--white);
-    color: var(--darkgray);
-    border: var(--lightblue) solid 5px; 
-    font-weight: bolder;
-}
+button:ho

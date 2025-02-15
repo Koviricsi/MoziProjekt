@@ -301,6 +301,13 @@ footer {
     }
 }
 
+.atmeneti-body{
+    background-image: url(../!forras/kep/hatter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+}
+
 .atmenet-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -314,6 +321,12 @@ footer {
     color: white;
     font-weight: bold;
     text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding-block: 1cqw;
+    font-family: 'Lexend Deca', serif;
+    font-size: var(--xxlarge-size);
 }
 
 .row-3 {
@@ -331,29 +344,36 @@ footer {
 }
 
 .side, .main {
-    color: var(--white);
     padding: 20px;
     margin: auto;
 }
 
 .infos {
     width: 100%;
-    color: var(--white);
-
+    font-family: 'Rubik', serif;
+    font-size: var(--medium-size);
 }
 
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background: var(--darkgray);
-    color: var(--lightblue);
-    text-decoration: none;
-    border-radius: 5px;
+    background-color: var(--darkgray);
+    color: var(--white);
+    border-radius: 15px;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 20px;
     width: 170px;
     font-size: 15px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+a :hover{
+    color: var(--lightblue);
 }
 
 .movie-poster {
@@ -370,9 +390,16 @@ footer {
 }
 
 th,td {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--white);
+    border-radius: 1px;
     padding: 12px;
     text-align: center;
+    font-family: 'Karla', serif;
+    font-size: var(--medium-size);
+}
+
+th {
+    border-right: 1px solid var(--white);
 }
 
 .info-table table {
@@ -445,3 +472,4 @@ p {
     }
 
 }
+

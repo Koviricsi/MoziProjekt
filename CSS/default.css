@@ -301,11 +301,18 @@ footer {
     }
 }
 
-.container {
+.atmenet-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50%;
     gap: 10px;
+    font-size: var(--medium-size);
+}
+
+.cim{
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
 .row-3 {
@@ -328,14 +335,10 @@ footer {
     margin: auto;
 }
 
-.main {
-    color: var(--white);
-}
-
-.fakeimg {
+.infos {
     width: 100%;
-    padding: 10%;
     color: var(--white);
+
 }
 
 .button {
@@ -348,23 +351,21 @@ footer {
     text-align: center;
     margin-bottom: 10px;
     margin-top: 20px;
-    width: 180px;
+    width: 170px;
+    font-size: 15px;
 }
 
 .movie-poster {
-    width: 300px;
+    width: 70%;
     border-radius: 10px;
     gap: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .movie-info h2 {
     margin-bottom: 10px;
-}
-
-.cim{
-    color: white;
-    font-weight: bold;
-    text-align: center;
 }
 
 th,td {
@@ -386,8 +387,31 @@ th,td {
     border: 1px solid white;
 }
 
-@media screen and (max-width: 700px) {
-    .container {
+p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 1264px) {
+    .atmenet-container {
+        grid-template-columns: 1fr;
+        border-radius: 20px;
+    }
+
+    .row-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .row-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .movie-poster {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .atmenet-container {
         grid-template-columns: 1fr;
         border-radius: 20px;
     }
@@ -397,11 +421,10 @@ th,td {
     }
 
     .movie-poster{
-        margin: 0px;
         width: 90%;
     }
 
-    .info-table{
+    .info-table table{
         width: 80%;
         overflow: auto;
         border-collapse: collapse;
@@ -420,8 +443,4 @@ th,td {
 
     }
 
-    p{
-        width: 85%;
-        text-align: justify;
-    }
 }

@@ -4,6 +4,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 1ch;
   flex-direction: column;
   box-shadow: inset 3cqw 0 5cqw 0 var(--black), inset 0 3cqw 5cqw 0 var(--black),
     inset -3cqw 0 5cqw 0 var(--black), inset 0 -3cqw 5cqw 0 var(--black);
@@ -62,7 +63,7 @@ main {
           grid-area: 1/5/1 / span 8;
           height: 10%;
           background-color: var(--silver);
-          border-bottom: solid 0.1cqh var(--white);
+          border-bottom: solid 0.4cqh var(--white);
         }
 
         > section {
@@ -75,16 +76,18 @@ main {
           font-size: var(--small-size);
           place-content: center;
           text-align: center;
+          cursor: pointer;
+          border: solid 0.4cqw var(--black);
 
           &:hover {
-            background-color: var(--lightblue);
+            background-color: hsl(from var(--purple) h s 60% / 100%);
           }
         }
       }
     }
 
     > section:nth-child(3) {
-      background-color: var(--silver);
+      background-color: var(--black);
       border-bottom-left-radius: 2cqw;
       border-bottom-right-radius: 2cqw;
       position: relative;
@@ -92,14 +95,16 @@ main {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      padding: 1cqh;
+      padding: 1ch;
+      flex-wrap: wrap;
+      gap: 1cqw;
 
       &::before {
         content: "";
         position: absolute;
         inset: 0;
         translate: 0 -98%;
-        background-color: var(--silver);
+        background-color: var(--black);
       }
 
       > div {
@@ -109,37 +114,27 @@ main {
         font-family: "Lexend Deca", serif;
         font-size: var(--medium-size);
         position: relative;
+        text-align: center;
+        flex-grow: 0.5;
         cursor: pointer;
-        background: transparent;
+        background-color: var(--darkgray);
         transition: all 0.2s;
-        transition-behavior: allow-discrete;
-
-        &::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background-color: var(--darkgray);
-          border-radius: 1cqw;
-          z-index: -1;
-        }
-
-        &:hover {
-          color: transparent;
-          background-image: linear-gradient(
-            -90deg,
-            var(--purple),
-            var(--lightblue)
-          );
-          background-clip: text;
-        }
       }
 
       > div:first-child {
         border: solid 0.4cqw var(--purple);
+
+        &:hover {
+          background-color: var(--purple);
+        }
       }
 
       > div:last-child {
         border: solid 0.4cqw var(--lightblue);
+
+        &:hover {
+          background-color: var(--lightblue);
+        }
       }
     }
   }
@@ -151,13 +146,14 @@ main {
     width: calc(85% - 4cqw);
     background-color: var(--darkgray);
     border-radius: 3cqw;
-    padding: 1cqw 2cqw;
+    padding: 3cqw;
 
     p {
       text-align: justify;
       color: var(--white);
       font-family: "Karla", serif;
       font-size: var(--small-size);
+      margin: 0;
     }
   }
 }
@@ -165,18 +161,22 @@ main {
 @media screen and (width < 768px) {
   main {
     > div:first-child {
-      width: 95%;
+      width: 90%;
       > section:nth-child(2) {
         > div {
           grid-template-columns: repeat(16, 6cqw);
           grid-template-rows: repeat(8, 6cqw);
           overflow-x: scroll;
+          justify-content: space-around;
 
           > section {
             font-size: var(--tiny-size);
           }
         }
       }
+    }
+    > div:last-child {
+      padding: 5cqw;
     }
   }
 }

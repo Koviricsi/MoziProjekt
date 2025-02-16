@@ -2,94 +2,7 @@ html, body{
     overflow-x: hidden;
 }
 
-.szalag-container{
-    display: flex;
-}
 
-.szalag {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--darkgray);
-    padding: 0;
-    margin-top: 100px;
-    width: calc(100vw/3);
-}
-
-
-
-.row {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-.kisdoboz .small {
-    width: 10%;
-    height: 20px;
-    background-color: var(--lightblue);
-    border: 2px solid var(--purple);
-    border-radius: 5px;
-}
-
-.nagydoboz .nagy {
-    width: 75%;
-    height: 350px;
-    background-color: var(--darkgray);
-    border-radius: 10px;
-    border: 3px, solid var(--purple);
-}
-
-.nagydoboz {
-    gap: 50px;
-    padding: 20px;
-}
-
-.kisdoboz {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-}
-
-
-div > h2{
-    color: var(--white);
-    font-size: var(--xxlarge-size);
-    text-align: center;
-}
-
-
-.elsodoboz{
-    width: 100vw;      
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: flex;
-    animation: 15s csussz infinite linear;
-}
-
-
-
-.masodikdoboz{
-    width: 100vw;      
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: flex;
-    animation: 15s csussz infinite linear;
-}
-
-.vissza{
-    animation: 15s csussz infinite linear reverse;
-}
-
-@keyframes csussz {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
 
 .nagy > h2 {
     opacity: 0; 
@@ -135,4 +48,8 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+
+
+
 

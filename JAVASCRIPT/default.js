@@ -166,9 +166,18 @@ if (localStorage.getItem("tickets") == null){
 }
 if (window.location.pathname != "/HTML/claim.html"){
   localStorage.removeItem("numbers");
+}
+
+if (["/HTML/index.html", "/HTML/after_claim.html", "/HTML/basket.html"].includes(window.location.pathname)){
   localStorage.removeItem("movie_title");
 }
 
 if (!["/HTML/claim.html", "/HTML/after_claim.html"].includes(window.location.pathname)) {
   localStorage.removeItem("new");
+}
+
+let cim = document.getElementsByClassName("cim");
+
+if (cim.length > 0){
+  localStorage.setItem("movie_title", cim[0].innerHTML);
 }

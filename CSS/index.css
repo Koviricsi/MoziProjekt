@@ -1,5 +1,14 @@
+main{
+    background-image: url(../!forras/kep/hatterindexnek.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding-block: 5vw;
+}
+
 .szalag-container {
-    margin: 5vw 0;
     background-color: black;
     padding: 10px;
     overflow-x: auto;  
@@ -53,7 +62,8 @@
     transition: opacity 0.5s ease-in-out;
     padding: 5px;
     color: var(--white);
-    font-size: var(--xxlarge-size);
+    font-size: 350%;
+    font-family: "Lexend Deca", serif ;
 }
 
 .nagy:hover > h2 {
@@ -87,3 +97,57 @@ button {
     font-weight: bolder;
 }
 
+
+@media screen and (width < 768px){
+
+    .nagy > button{
+        opacity: 1;
+        padding: 10px 140px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        cursor: pointer;
+        color: var(--white);
+        background-color: var(--darkgray);
+        border: 2px solid var(--white);
+        width: 100%;
+    }
+
+    .nagydoboz .nagy{
+        padding: 0px;
+    }
+
+
+    .nagy:hover > h2 {
+        opacity: 0;
+    }
+    
+
+
+    .nagy:hover {
+        background-blend-mode: revert;
+    }
+    
+    
+    .nagy:hover > button {
+        opacity: 1;
+        padding: 10px 140px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        cursor: pointer;
+        color: var(--white);
+        background-color: var(--darkgray);
+        border: 2px solid var(--white);
+        width: 100%;
+    }
+    
+    .nagy > button:hover {
+        background-color:revert;
+        color: revert;
+        border: revert;
+        font-weight: revert;
+    }
+}

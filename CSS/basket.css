@@ -1,0 +1,153 @@
+body{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 8cqw;
+  background-image: url(../!forras/kep/after_claimbg.jpg);
+  box-shadow: inset 3cqw 0 5cqw 0 var(--black), inset 0 3cqw 5cqw 0 var(--black),
+    inset -3cqw 0 5cqw 0 var(--black), inset 0 -3cqw 5cqw 0 var(--black);
+
+  > div {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-direction: column;
+    width: 80%;
+    background-color: var(--white);
+    padding: 2cqw;
+    border-radius: 3cqw;
+
+    > span:first-child{
+        font-family: 'Lexend Deca', serif;
+        font-size: var(--xxxlarge-size);
+        text-align: center;
+    }
+
+    > span:last-child{
+        font-family: 'Lexend Deca', serif;
+        font-size: var(--large-size);
+        text-align: center;
+    }
+
+    > section:first-child {
+      width: 100%;
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      flex-direction: inherit;
+
+      > div {
+        width: 100%;
+        border-bottom: solid var(--darkgray) 0.1cqw;
+
+        > h3:first-child {
+          font-family: "Lexend Deca", serif;
+          font-size: var(--xlarge-size);
+          font-weight: bolder;
+          margin: 0;
+        }
+
+        > p {
+          margin: 0;
+
+          span:first-child {
+            font-family: "Rubik", serif;
+            font-size: var(--medium-size);
+          }
+
+          span:last-child {
+            font-family: "Karla", serif;
+            font-size: var(--medium-size);
+          }
+        }
+
+        > h3:last-child {
+          font-family: "Lexend Deca", serif;
+          font-size: var(--medium-size);
+          text-align: right;
+
+          &::after {
+            content: " Ft";
+          }
+        }
+      }
+    }
+
+    > section:last-child {
+      width: 60%;
+      margin-top: 1.5cqw;
+      display: inherit;
+      justify-content: space-between;
+      align-items: inherit;
+      flex-direction: inherit;
+      gap: 2cqw;
+
+      > p {
+        width: 100%;
+        display: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        margin: 0;
+        font-family: "Rubik", serif;
+        font-size: var(--medium-size);
+
+        span:last-child::after {
+          content: " Ft";
+        }
+      }
+
+      > section {
+        display: inherit;
+        justify-content: center;
+        align-items: inherit;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 2cqw;
+
+        > div {
+          display: inherit;
+          justify-content: center;
+          align-items: inherit;
+          border-radius: 3cqw;
+          color: var(--white);
+          font-family: "Karla", serif;
+          font-size: var(--medium-size);
+          transition: all 0.2s;
+        }
+
+        > div:first-child {
+          background-color: var(--lightblue);
+          flex-direction: column;
+          gap: 0.25cqw;
+          padding: 1cqh 1cqw;
+
+          > input {
+            display: flex;
+            align-items: center;
+            appearance: none;
+            border: none;
+            border-radius: 2cqw;
+            width: 75%;
+            font-size: var(--tiny-size);
+            font-family: "Rubik", serif;
+            padding: 0.25cqw;
+
+            &:is(:focus-visible, :active, :current) {
+              outline: var(--purple) solid;
+            }
+          }
+        }
+
+        > div:last-child {
+          background-color: var(--purple);
+          padding: 1cqh 1.5cqw;
+        }
+      }
+    }
+  }
+}

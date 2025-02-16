@@ -61,6 +61,8 @@ main {
       align-items: center;
       flex-wrap: wrap;
       gap: 4cqw;
+      position: relative;
+      z-index: 10;
 
       > div {
         border-radius: 2cqw;
@@ -76,6 +78,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 12;
       }
 
       > div:first-child {

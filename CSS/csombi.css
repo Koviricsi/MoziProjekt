@@ -377,7 +377,8 @@ a :hover{
 }
 
 .movie-poster {
-    width: 70%;
+    max-width: 500px;
+    width: 80%;
     border-radius: 10px;
     gap: 10%;
     display: block;

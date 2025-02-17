@@ -15,14 +15,16 @@ function ChairManager() {
     chair.innerHTML = number;
 
     for (let i = 0; i < tickets[title][0].length; i++) {
-      if (tickets[title][0][i].slice(0,-1).includes(number)
-          && tickets[title][0][i].at(-1) == selected_date) {
+      if (
+        tickets[title][0][i].slice(0, -1).includes(number) &&
+        tickets[title][0][i].at(-1) == selected_date
+      ) {
         claimed = true;
       }
     }
 
-    for (let i = 0; i < tickets[title][2].length; i++){
-      if (selected_date == tickets[title][2][i]){
+    for (let i = 0; i < tickets[title][2].length; i++) {
+      if (selected_date == tickets[title][2][i]) {
         if (tickets[title][1][i].includes(number)) {
           claimed = true;
         }
@@ -81,7 +83,12 @@ function RandomData() {
 
       let date = new Date();
       date.setDate(date.getDate() + j);
-      date.setHours(Math.floor(Math.random() * (21 - 10 + 1)) + 10+1, 0, 0, 0);
+      date.setHours(
+        Math.floor(Math.random() * (21 - 10 + 1)) + 10 + 1,
+        0,
+        0,
+        0
+      );
 
       tickets[title][2].push(date);
     }
@@ -152,11 +159,11 @@ function SetDates() {
     option.innerHTML =
       date.getFullYear().toString() +
       "-" +
-      (date.getMonth()+1) +
+      (date.getMonth() + 1) +
       "-" +
       date.getDate() +
       " " +
-      (date.getHours()-1) +
+      (date.getHours() - 1) +
       ":00";
     dateselect.appendChild(option);
   });

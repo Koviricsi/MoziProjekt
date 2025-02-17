@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../CSS/default.css" />
-    <link rel="stylesheet" href="../CSS/after_claim.css" />
+    <link rel="stylesheet" href="../CSS/payment.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +19,14 @@
     />
 
     <script src="../JAVASCRIPT/default.js" defer></script>
-    <script src="../JAVASCRIPT/after_claim.js" defer></script>
+    <script src="../JAVASCRIPT/payment.js" defer></script>
+
     <script
       src="https://kit.fontawesome.com/e0677ef9f1.js"
       crossorigin="anonymous"
     ></script>
 
-    <title>Popcorn Palota - Foglalás megerősítés</title>
+    <title>Popcorn Palota - Fizetés</title>
   </head>
   <body>
     <header>
@@ -57,34 +59,46 @@
       </section>
     </nav>
 
-    <main style="min-height: 100vh;">
-      <div id="content">
-        <h1>
-          Köszönjük, hogy a <span>Popcorn Palotát</span> választotta mozizásra!
-        </h1>
-        <p>
-          Kedves Vásárló! Köszönjük, hogy mozijegyet foglalt nálunk! Szeretnénk
-          tájékoztatni, hogy a foglalás csupán a jegyek félretételét jelenti, és
-          nem biztosítja azok automatikus birtoklását. A jegyek végleges
-          megszerzéséhez <span>a foglalást időben ki kell fizetni</span>, akár
-          online, akár a helyszínen. Online vásárlás esetén kérjük, hogy menjen
-          a kosárhoz a fizetéshez. Felhívjuk figyelmét, hogy a film kezdete
-          előtt <span>legalább 1 órával</span> szükséges a jegy kifizetése,
-          különben a foglalás automatikusan törlődik, és a jegy ismét elérhetővé
-          válik más vásárlók számára.
-          <br />
-          <span>Kellemes moziélményt kívánunk!</span>
-        </p>
+    <main style="min-height: 100vh">
+      <div>
         <section>
-          <div onclick="window.location.href = '../HTML/index.html'">
-            <span class="material-symbols-outlined">keyboard_arrow_left</span
-            >Vissza a főoldalra
-          </div>
-          <div onclick="window.location.href = '../HTML/basket.html'">
-            Tovább a kosárhoz<span class="material-symbols-outlined"
-              >keyboard_arrow_right</span
-            >
-          </div>
+          <h2>Fizetés</h2>
+          <h3>Fizetési adatok</h3>
+
+          <label for="name">Kártyán szereplő név</label>
+          <input type="text" maxlength="50" id="name" />
+
+          <label for="cardnumber">Kártyaszám</label>
+          <input
+            type="text"
+            min="0"
+            minlength="16"
+            maxlength="16"
+            id="cardnumber"
+          />
+
+          <label for="cardtype">Kártya Típus</label>
+          <select id="cardtype">
+            <option>Mastercard</option>
+            <option>Visa</option>
+          </select>
+
+          <section>
+            <div>
+              <label for="expiry1">Lejárat</label>
+              <input type="text" minlength="2" maxlength="2" id="expiry1" />
+              <input type="text" minlength="2" maxlength="2" id="expiry2" />
+            </div>
+            <div>
+              <label for="cvv">CVV</label>
+              <input type="text" minlength="3" maxlength="3" id="cvv" />
+            </div>
+          </section>
+
+          <button>Fizetés</button>
+        </section>
+        <section>
+          <img src="../!forras/kep/popcorn-bucket.svg" />
         </section>
       </div>
     </main>

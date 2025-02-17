@@ -161,23 +161,39 @@ let popcorn_move = setInterval(function () {
   }
 }, 1000 / fps);
 
-if (localStorage.getItem("tickets") == null){
-    localStorage.setItem("tickets", JSON.stringify({}));
+if (localStorage.getItem("tickets") == null) {
+  localStorage.setItem("tickets", JSON.stringify({}));
 }
-if (window.location.pathname != "/HTML/claim.html"){
+if (window.location.pathname != "/HTML/claim.html") {
   localStorage.removeItem("numbers");
 }
 
-if (["/HTML/index.html", "/HTML/after_claim.html", "/HTML/basket.html"].includes(window.location.pathname)){
+if (
+  ["/HTML/index.html", "/HTML/after_claim.html", "/HTML/basket.html"].includes(
+    window.location.pathname
+  )
+) {
   localStorage.removeItem("movie_title");
 }
 
-if (!["/HTML/claim.html", "/HTML/after_claim.html"].includes(window.location.pathname)) {
+if (
+  !["/HTML/claim.html", "/HTML/after_claim.html"].includes(
+    window.location.pathname
+  )
+) {
   localStorage.removeItem("new");
+}
+
+if (
+  !["/HTML/basket.html", "/HTML/payment.html"].includes(
+    window.location.pathname
+  )
+) {
+  localStorage.removeItem("cost");
 }
 
 let cim = document.getElementsByClassName("cim");
 
-if (cim.length > 0){
+if (cim.length > 0) {
   localStorage.setItem("movie_title", cim[0].innerHTML);
 }

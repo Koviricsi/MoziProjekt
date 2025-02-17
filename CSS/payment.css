@@ -1,0 +1,139 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 8cqw;
+  background-image: url(../!forras/kep/after_claimbg.jpg);
+  background-size: cover;
+  box-shadow: inset 3cqw 0 5cqw 0 var(--black), inset 0 3cqw 5cqw 0 var(--black),
+    inset -3cqw 0 5cqw 0 var(--black), inset 0 -3cqw 5cqw 0 var(--black);
+
+  > div {
+    width: 85%;
+    display: inherit;
+    justify-content: inherit;
+    align-items: stretch;
+    background-color: var(--white);
+    border-radius: 3cqw;
+    flex-wrap: wrap;
+
+    > section:first-child {
+      display: inherit;
+      justify-content: inherit;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 2cqh 2cqw;
+
+      > h2 {
+        margin: 0;
+        font-family: "Lexend Deca", serif;
+        font-size: var(--xxlarge-size);
+        color: var(--purple);
+      }
+
+      > h3,
+      label {
+        margin: 0;
+        margin-block: 1cqh 0.5cqh;
+        font-family: "Rubik", serif;
+        font-size: var(--large-size);
+        color: var(--purple);
+      }
+
+      > label {
+        font-size: var(--medium-size);
+      }
+
+      input,
+      select {
+        appearance: none;
+        border: none;
+        border: 0.1cqw solid var(--lightblue);
+        border-radius: 2cqw;
+        padding: 0.5cqh 1cqw;
+        font-family: "Karla", serif;
+        font-size: var(--small-size);
+        width: 80%;
+
+        &:is(:focus-visible, :active, :current) {
+          outline: var(--purple) solid 0.1cqw;
+        }
+      }
+
+      > select {
+        width: fit-content;
+      }
+
+      > section {
+        margin-top: 1cqh;
+        display: flex;
+        justify-content: left;
+        gap: 3cqw;
+
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 0.2cqw;
+
+          > label {
+            margin: 0;
+            margin-right: 1cqw;
+          }
+
+          > input {
+            padding: 0.2cqh 0.5cqw;
+            font-size: var(--small-size);
+            height: fit-content;
+            width: 2ch;
+          }
+        }
+
+        #cvv {
+          padding: 0.2cqh 0.5cqw;
+          font-size: var(--small-size);
+          height: fit-content;
+          width: 3ch;
+        }
+      }
+
+      button {
+        margin-top: 4cqh;
+        border: none;
+        border: 0.2cqw solid var(--purple);
+        border-radius: 2cqw;
+        padding: 1cqh 8cqw;
+        font-family: "Rubik", serif;
+        font-size: var(--small-size);
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--purple);
+        background-color: var(--white);
+        cursor: pointer;
+        transition: 0.2s all;
+
+        &:hover {
+          background-color: var(--purple);
+          color: var(--white);
+        }
+
+        &:is(:focus-visible, :active, :current) {
+          outline: var(--purple) solid 0.1cqw;
+        }
+      }
+    }
+
+    section:last-child{
+        width: 30%;
+        background-color: var(--black);
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+            filter: invert(1);
+            rotate: 35deg;
+        }
+    }
+  }
+}

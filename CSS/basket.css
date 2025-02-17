@@ -18,16 +18,16 @@ main {
     padding: 2cqw;
     border-radius: 3cqw;
 
-    > span:first-child{
-        font-family: 'Lexend Deca', serif;
-        font-size: var(--xxxlarge-size);
-        text-align: center;
+    > span:first-child {
+      font-family: "Lexend Deca", serif;
+      font-size: var(--xxxlarge-size);
+      text-align: center;
     }
 
-    > span:last-child{
-        font-family: 'Lexend Deca', serif;
-        font-size: var(--large-size);
-        text-align: center;
+    > span:last-child {
+      font-family: "Lexend Deca", serif;
+      font-size: var(--large-size);
+      text-align: center;
     }
 
     > section:first-child {
@@ -62,7 +62,7 @@ main {
           }
         }
 
-        > h4{
+        > h4 {
           font-family: "Karla", serif;
           font-size: var(--medium-size);
           margin: 0;
@@ -148,6 +148,7 @@ main {
         > div:last-child {
           background-color: var(--purple);
           padding: 1cqh 1.5cqw;
+          cursor: pointer;
         }
       }
     }

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../CSS/default.css" />
-    <link rel="stylesheet" href="../CSS/after_claim.css" />
+    <link rel="stylesheet" href="../CSS/basket.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +19,7 @@
     />
 
     <script src="../JAVASCRIPT/default.js" defer></script>
-    <script src="../JAVASCRIPT/after_claim.js" defer></script>
+    <script src="../JAVASCRIPT/basket.js" defer></script>
     <script
       src="https://kit.fontawesome.com/e0677ef9f1.js"
       crossorigin="anonymous"
@@ -51,43 +52,31 @@
       </section>
       <section onclick="window.location.href = '../HTML/basket.html'">
         <div>
-          <span class="material-symbols-outlined">shopping_basket</span>
+          <span class="material-symbols-outlined now">shopping_basket</span>
           <span>Kosár</span>
         </div>
       </section>
     </nav>
 
     <main>
-      <div id="content">
-        <h1>
-          Köszönjük, hogy a <span>Popcorn Palotát</span> választotta mozizásra!
-        </h1>
-        <p>
-          Kedves Vásárló! Köszönjük, hogy mozijegyet foglalt nálunk! Szeretnénk
-          tájékoztatni, hogy a foglalás csupán a jegyek félretételét jelenti, és
-          nem biztosítja azok automatikus birtoklását. A jegyek végleges
-          megszerzéséhez <span>a foglalást időben ki kell fizetni</span>, akár
-          online, akár a helyszínen. Online vásárlás esetén kérjük, hogy menjen
-          a kosárhoz a fizetéshez. Felhívjuk figyelmét, hogy a film kezdete
-          előtt <span>legalább 1 órával</span> szükséges a jegy kifizetése,
-          különben a foglalás automatikusan törlődik, és a jegy ismét elérhetővé
-          válik más vásárlók számára.
-          <br />
-          <span>Kellemes moziélményt kívánunk!</span>
-        </p>
+      <div id="container"><span>Kosara jelenleg üres.</span><span>Foglaljon az online felületen, hogy kifizetendő jegyei megjelenjenek itt.</span></div>
+    </main>
+
+    <template id="temp">
+      <section id="ticketlist">
+      </section>
+      <section>
+        <p><span>Teljes ár:</span><span id="costsum">1234</span></p>
         <section>
-          <div onclick="window.location.href = '../HTML/index.html'">
-            <span class="material-symbols-outlined">keyboard_arrow_left</span
-            >Vissza a főoldalra
-          </div>
-          <div onclick="window.location.href = '../HTML/basket.html'">
-            Tovább a kosárhoz<span class="material-symbols-outlined"
+          <div>Kuponkód:<input type="text" maxlength="10" minlength="1" /></div>
+          <div>
+            Tovább a fizetéshez<span class="material-symbols-outlined"
               >keyboard_arrow_right</span
             >
           </div>
         </section>
-      </div>
-    </main>
+      </section>
+    </template>
 
     <footer>
       <div>

@@ -19,4 +19,4 @@ Oldalak:\
 \
 -Navbar, footer (Ricsi)\
 \
-https://koviricsi.github.io/MoziProjekt/HTML/default.html
+https://koviricsi.github.io/MoziProjekt/HTML/index.html

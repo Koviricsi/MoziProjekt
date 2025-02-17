@@ -12,6 +12,7 @@ main{
     padding-right: 10cqw;
     padding-bottom: 5cqw;
     flex-direction: row;
+    font-family: "Lexend Deca", serif ;
 }
 
 .nagy{
@@ -34,6 +35,7 @@ main{
 @media screen and (width < 768px){
     .container{
         flex-direction: column;
+        gap: 10cqw;
     }
 
 }
@@ -43,40 +45,51 @@ select{
     width: 20cqw;
     font-size: var( --large-size);
     text-align: center;
-    background-color: var(--silver);
-    color: var(--darkblue);
+    color: var(--white);
     border-radius: 3cqw;
     font-weight: bold;
-
+    border: solid 0.3cqw var(--purple);
+    background-color: var(--darkgray);
+    box-shadow: 0.3cqw 0.2cqw 2cqw var(--purple);
+    transition: 1s;
 }
+
 
 select option{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+select:hover{
+    background-color: var(--purple);
     color: var(--white);
-    background-color: var(--silver);
-    border-radius: 2cqw;
 }
 
-
-
-h1{
-    background-image: linear-gradient(180deg, var(--purple), var(--lightblue));
-    background-clip: text;
-    color: transparent;
-}
 
 button{
     min-width: 35%;
     width: 15cqw;
-    height: 10%;
+    height: 13%;
     font-size: var( --large-size);
     text-align: center;
-    background-color: var(--silver);
-    color: var(--darkblue);
     font-weight: bold;
+    border: solid 0.5cqw var(--lightblue);
+    border-radius: 3cqw;
+    color: var(--white);
+    border: solid 0.5cqw var(--lightblue);
+    background-color: var(--darkgray);
+    box-shadow: 0.3cqw 0.2cqw 2cqw var(--lightblue);
+    transition: 0.5s;
+
 }
 
 button:hover{
-    background-color: var(--darkblue);
+    background-color: var(--lightblue);
     color: var(--white);
-    border: solid 1px var(--white);
+}
+
+
+.turorudi{
+    padding-bottom: 0.7cqw;
+    border-bottom: solid 0.3cqw var(--lightblue);
 }

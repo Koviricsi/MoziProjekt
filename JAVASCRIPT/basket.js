@@ -24,10 +24,22 @@ function LoadItems(){
                 span1.innerHTML = "Szék(ek): ";
 
                 let span2 = document.createElement("span");
-                span2.innerHTML = element.join(",");
+                span2.innerHTML = element.slice(0,-1).join(",");
 
                 p.appendChild(span1);
                 p.appendChild(span2);
+
+                let h4 = document.createElement("h4");
+                let basketdate = new Date(element.at(-1));
+                h4.innerHTML = "Időpont: " + 
+                basketdate.getFullYear().toString() +
+                "-" +
+                (basketdate.getMonth()+1) +
+                "-" +
+                basketdate.getDate() +
+                " " +
+                (basketdate.getHours()-1) +
+                ":00";;
 
                 let h32 = document.createElement("h3");
                 h32.innerHTML = element.length * 2 * 1000;
@@ -35,6 +47,7 @@ function LoadItems(){
 
                 div.appendChild(h31);
                 div.appendChild(p);
+                div.appendChild(h4);
                 div.appendChild(h32);
 
                 ticketlist.appendChild(div);

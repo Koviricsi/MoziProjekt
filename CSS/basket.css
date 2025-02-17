@@ -62,6 +62,12 @@ main {
           }
         }
 
+        > h4{
+          font-family: "Karla", serif;
+          font-size: var(--medium-size);
+          margin: 0;
+        }
+
         > h3:last-child {
           font-family: "Lexend Deca", serif;
           font-size: var(--medium-size);

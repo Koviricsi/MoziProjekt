@@ -1,5 +1,3 @@
-localStorage.setItem("ujkod", JSON.stringify(true))
-
 if(localStorage.getItem("kodok") == null){
 
     localStorage.setItem("kodok", JSON.stringify([]));
@@ -7,8 +5,6 @@ if(localStorage.getItem("kodok") == null){
 
 let kod = JSON.parse(localStorage.getItem("kodok"));
 let szoveg = "";
-
-
 
 
 function Randomszam(min, max){
@@ -20,13 +16,15 @@ if(JSON.parse(localStorage.getItem("ujkod"))){
     for(let i = 0; i < 8; i++){
         let random = Randomszam(97, 122);
      
-        let betu = String.fromCharCode(random)
+        let betu = String.fromCharCode(random);
      
-        szoveg += betu
+        szoveg += betu;
      
      }
-
-     kod.push(szoveg)
+     let cost = localStorage.getItem("cost");
+     let kupon = {};
+     kupon[szoveg] = cost;
+     kod.push(kupon);
 
      localStorage.setItem("ujkod", JSON.stringify(false))
 
@@ -40,18 +38,10 @@ for (let i = 0; i < kod.length; i++) {
 
     let h3 = document.createElement("h3");
     h3.classList.add("kodocska");
-    h3.innerHTML = kod[i] ;
+    h3.innerHTML = Object.keys(kod[i]);
     irdat.appendChild(h3)
     
 }
-
-
-
-
-
-JSON.stringify(kod);
-
-window.onload = kod;
 
 
 localStorage.setItem("before", "gift");

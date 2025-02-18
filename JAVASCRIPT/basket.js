@@ -23,7 +23,7 @@ function LoadItems() {
         span1.innerHTML = "Szék(ek): ";
 
         let span2 = document.createElement("span");
-        span2.innerHTML = element.slice(0, -1).join(",");
+        span2.innerHTML = element.slice(0, -1).join(", ");
 
         p.appendChild(span1);
         p.appendChild(span2);

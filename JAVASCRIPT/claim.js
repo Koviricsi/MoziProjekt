@@ -5,6 +5,7 @@ let selected_date;
 function ChairManager() {
   number = 0;
   room.innerHTML = "";
+  room.appendChild(document.createElement("div"));
   function Chair(number, i, j) {
     let chair = document.createElement("section");
     let tickets = JSON.parse(localStorage.getItem("tickets"));

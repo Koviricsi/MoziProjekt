@@ -165,6 +165,10 @@ if (localStorage.getItem("tickets") == null) {
   localStorage.setItem("tickets", JSON.stringify({}));
 }
 
+if (localStorage.getItem("kodok") == null) {
+  localStorage.setItem("kodok", JSON.stringify([]));
+}
+
 let cim = document.getElementsByClassName("cim");
 
 if (cim.length > 0) {

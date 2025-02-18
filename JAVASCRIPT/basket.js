@@ -70,11 +70,13 @@ function Sale(code){
     if (code == data[0]){
       costsum.innerHTML = 
       "<span style='text-decoration: line-through;'>" + allcost + " Ft</span><br>" + "<span>" + (allcost-data[1]) + "</span>";  
+      localStorage.setItem("last_coupon", data[0]);
       return;
     }
     else
     {
       costsum.innerHTML = allcost;
+      localStorage.setItem("last_coupon", "");
     }
 
   }

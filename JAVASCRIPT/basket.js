@@ -59,6 +59,27 @@ function LoadItems() {
   }
 }
 
+function Sale(code){
+  let coupons = JSON.parse(localStorage.getItem("kodok"));
+  let costsum = document.getElementById("costsum");
+  let allcost = localStorage.getItem("cost");
+
+  for (let i = 0; i < coupons.length; i++) {
+    let data = Object.entries(coupons[i])[0];
+    
+    if (code == data[0]){
+      costsum.innerHTML = 
+      "<span style='text-decoration: line-through;'>" + allcost + " Ft</span><br>" + "<span>" + (allcost-data[1]) + "</span>";  
+      return;
+    }
+    else
+    {
+      costsum.innerHTML = allcost;
+    }
+
+  }
+}
+
 window.onload = LoadItems();
 
 localStorage.setItem("before", "basket");

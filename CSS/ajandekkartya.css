@@ -21,6 +21,9 @@ main{
 
 .kicsi{
     flex: 1;
+    max-height: 400px;
+    overflow-y: auto;  
+    overflow-x: hidden;
 }
 
 .oszlop{
@@ -32,10 +35,10 @@ main{
     padding: 2cqw;
 }
 
-@media screen and (width < 768px){
+@media screen and (width < 1000px){
     .container{
         flex-direction: column;
-        gap: 10cqw;
+        gap: 3cqw;
     }
 
 }

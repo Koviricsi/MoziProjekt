@@ -45,7 +45,7 @@
                 <span>Műsorok</span>
             </div>
         </section>
-        <section onclick="window.location.href = '#'">
+        <section onclick="window.location.href = '../HTML/ajandekkartya.html'">
             <div>
                 <span class="material-symbols-outlined">card_membership</span>
                 <span>Ajándékkártya</span>
@@ -73,10 +73,10 @@
 
                 <h3>Érték: 
 
-                <select class = "valasztas">
-                    <option value="2000Ft">2000Ft</option>
-                    <option value="2000Ft">4000Ft</option>
-                    <option value="2000Ft">6000Ft</option>
+                <select class = "valasztas" id = "penz" onchange="cost();">
+                    <option value="2000">2000Ft</option>
+                    <option value="4000">4000Ft</option>
+                    <option value="6000">6000Ft</option>
                 </select>
 
                 </h3>
@@ -88,7 +88,7 @@
 
             </div>
 
-            <div class="oszlop kicsi">
+            <div id = "banan" class="oszlop kicsi">
                 <h1 class="turorudi">Kódjaid: </h1>
                 <h3 class="kodocska"></h3>
             </div>

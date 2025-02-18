@@ -301,7 +301,7 @@ footer {
     }
 }
 
-.atmeneti-body{
+.atmeneti-body {
     background-image: url(../!forras/kep/hatter.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -317,7 +317,7 @@ footer {
     padding: 10px;
 }
 
-.cim{
+.cim {
     color: white;
     font-weight: bold;
     text-align: center;
@@ -343,7 +343,8 @@ footer {
     border-color: var(--white);
 }
 
-.side, .main {
+.side,
+.main {
     padding: 20px;
     margin: auto;
 }
@@ -372,7 +373,7 @@ footer {
     align-items: center;
 }
 
-a :hover{
+a :hover {
     color: var(--lightblue);
 }
 
@@ -390,7 +391,8 @@ a :hover{
     margin-bottom: 10px;
 }
 
-th,td {
+th,
+td {
     border-bottom: 1px solid var(--white);
     border-radius: 1px;
     padding: 12px;
@@ -411,7 +413,8 @@ th {
     height: 300px;
 }
 
-.info-table th, .info-table td {
+.info-table th,
+.info-table td {
     padding: 10px;
     border: 1px solid white;
 }
@@ -429,7 +432,7 @@ p {
     .row-3 {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .row-2 {
         grid-template-columns: 1fr 1fr;
     }
@@ -445,27 +448,28 @@ p {
         border-radius: 20px;
     }
 
-    .row-3, .row-2 {
+    .row-3,
+    .row-2 {
         grid-template-columns: 1fr;
     }
 
-    .movie-poster{
+    .movie-poster {
         width: 90%;
     }
 
-    .info-table table{
+    .info-table table {
         width: 80%;
         overflow: auto;
         border-collapse: collapse;
     }
 
-    .main{
+    .main {
         padding: 10px;
         margin: 10px;
         margin-right: 30px;
     }
 
-    .movie-info{
+    .movie-info {
         margin: 0px;
         margin-right: 30px;
         margin-bottom: 200px;
@@ -474,3 +478,50 @@ p {
 
 }
 
+
+
+
+.side {
+    height: 90%;
+}
+
+
+
+.tablahatter {
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: 2cqw;
+}
+
+
+
+.hatter {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 2cqw;
+}
+
+
+button {
+    margin-top: 0.3cqw;
+    padding: 0.4cqw;
+    width: 200px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--darkgray);
+    border: 3px solid var(--lightblue);
+    border-radius: 0.3cqw;
+    box-shadow: 0.2cqw 0.2cqw 2cqw var(--lightblue);
+    transition: 0.5s;
+
+}
+
+
+button:hover {
+    background-color: var(--lightblue);
+    color: var(--white);
+    border: 3px solid var(--lightblue);
+    border-radius: 0.3cqw;
+    box-shadow: 0.2cqw 0.2cqw 2cqw var(--lightblue);
+    font-weight: bolder;
+}

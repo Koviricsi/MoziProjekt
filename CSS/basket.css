@@ -146,9 +146,17 @@ main {
         }
 
         > div:last-child {
-          background-color: var(--purple);
-          padding: 1cqh 1.5cqw;
+          transition: all 0.2s;
+          background-color: var(--white);
+          border: 0.3cqw solid var(--purple);
+          color: var(--purple);
+          padding: 2cqh 1.5cqw;
           cursor: pointer;
+
+          &:hover{
+            color: var(--white);
+            background-color: var(--purple);
+          }
         }
       }
     }

@@ -2,7 +2,7 @@ let nav = document.getElementsByTagName("nav")[0];
 let navprogress = 1.05;
 let height = parseFloat(window.getComputedStyle(nav).height) * navprogress;
 let navTime = null;
-navAnimate();
+
 
 setTimeout(function () {
   navTime = setInterval(navAnimate, 5);
@@ -26,6 +26,9 @@ function navAnimate() {
   }
   navprogress -= 0.01;
 }
+
+window.onload = navAnimate();
+
 
 //Első verzió↓
 /*

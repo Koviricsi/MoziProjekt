@@ -60,3 +60,5 @@ function LoadItems() {
 }
 
 window.onload = LoadItems();
+
+localStorage.setItem("before", "basket");

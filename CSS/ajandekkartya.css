@@ -13,7 +13,6 @@ main{
     padding-bottom: 5cqw;
     flex-direction: row;
     font-family: "Lexend Deca", serif ;
-
 }
 
 .nagy{
@@ -97,4 +96,3 @@ button:hover{
     padding-bottom: 0.7cqw;
     border-bottom: solid 0.3cqw var(--lightblue);
 }
-

@@ -46,7 +46,7 @@ main{
     border: 3px solid var(--white);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     position: relative;
@@ -87,13 +87,18 @@ button {
     cursor: pointer;
     color: var(--white);
     background-color: var(--darkgray);
-    border: 2px solid var(--lightblue);
+    border: 3px solid var(--lightblue);
+    border-radius: 0.3cqw;
+    box-shadow: 0.2cqw 0.2cqw 2cqw var(--lightblue);
+    transition: 0.5s;
 }
 
 .nagy > button:hover {
-    background-color: var(--white);
-    color: var(--darkgray);
+    background-color: var(--lightblue);
+    color: var(--white);
     border: 3px solid var(--lightblue);
+    border-radius: 0.3cqw;
+    box-shadow: 0.2cqw 0.2cqw 2cqw var(--lightblue);
     font-weight: bolder;
 }
 
@@ -110,7 +115,9 @@ button {
         cursor: pointer;
         color: var(--white);
         background-color: var(--darkgray);
-        border: 2px solid var(--white);
+        border: 3px solid var(--lightblue);
+        border-radius: 0.3cqw;
+        box-shadow: 0.2cqw 0.2cqw 2cqw var(--lightblue);
         width: 100%;
     }
 
@@ -140,14 +147,17 @@ button {
         cursor: pointer;
         color: var(--white);
         background-color: var(--darkgray);
-        border: 2px solid var(--white);
+        border: 3px solid var(--lightblue);
+        border-radius: 0.3cqw;
+        box-shadow: 0.2cqw 0.2cqw 2cqw var(--lightblue);
         width: 100%;
     }
-    
     .nagy > button:hover {
-        background-color:revert;
-        color: revert;
-        border: revert;
-        font-weight: revert;
+        background-color: var(--lightblue);
+        color: var(--white);
+        border: 3px solid var(--lightblue);
+        border-radius: 0.3cqw;
+        box-shadow: 0.2cqw 0.2cqw 2cqw var(--lightblue);
+        font-weight: bolder;
     }
 }

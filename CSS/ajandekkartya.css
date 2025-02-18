@@ -1,0 +1,100 @@
+main{
+    background-image: url(../!forras/kep/hatter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    gap: 0.5cqw;
+    padding-left: 10cqw;
+    padding-top: 5cqw;
+    padding-right: 10cqw;
+    padding-bottom: 5cqw;
+    flex-direction: row;
+    font-family: "Lexend Deca", serif ;
+
+}
+
+.nagy{
+    flex: 3;
+}
+
+.kicsi{
+    flex: 1;
+    max-height: 400px;
+    overflow-y: auto;  
+    overflow-x: hidden;
+}
+
+.oszlop{
+    background-color: var(--darkgray);
+    color: var(--white);
+    border-radius: 2cqw;
+    text-align: center;
+    font-size: var(--xlarge-size);
+    padding: 2cqw;
+}
+
+@media screen and (width < 1000px){
+    .container{
+        flex-direction: column;
+        gap: 3cqw;
+    }
+
+}
+
+select{
+    min-width: 35%;
+    width: 20cqw;
+    font-size: var( --large-size);
+    text-align: center;
+    color: var(--white);
+    border-radius: 3cqw;
+    font-weight: bold;
+    border: solid 0.3cqw var(--purple);
+    background-color: var(--darkgray);
+    box-shadow: 0.3cqw 0.2cqw 2cqw var(--purple);
+    transition: 1s;
+}
+
+
+select option{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+select:hover{
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+
+button{
+    min-width: 35%;
+    width: 15cqw;
+    height: 13%;
+    font-size: var( --large-size);
+    text-align: center;
+    font-weight: bold;
+    border: solid 0.5cqw var(--lightblue);
+    border-radius: 3cqw;
+    color: var(--white);
+    border: solid 0.5cqw var(--lightblue);
+    background-color: var(--darkgray);
+    box-shadow: 0.3cqw 0.2cqw 2cqw var(--lightblue);
+    transition: 0.5s;
+
+}
+
+button:hover{
+    background-color: var(--lightblue);
+    color: var(--white);
+}
+
+
+.turorudi{
+    padding-bottom: 0.7cqw;
+    border-bottom: solid 0.3cqw var(--lightblue);
+}
+

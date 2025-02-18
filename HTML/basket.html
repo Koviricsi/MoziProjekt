@@ -25,7 +25,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Default (minta)</title>
+    <title>Popcorn Palota - Kosár</title>
   </head>
   <body>
     <header>
@@ -58,7 +58,7 @@
       </section>
     </nav>
 
-    <main>
+    <main style="min-height: 100vh;">
       <div id="container"><span>Kosara jelenleg üres.</span><span>Foglaljon az online felületen, hogy kifizetendő jegyei megjelenjenek itt.</span></div>
     </main>
 
@@ -69,7 +69,7 @@
         <p><span>Teljes ár:</span><span id="costsum">1234</span></p>
         <section>
           <div>Kuponkód:<input type="text" maxlength="10" minlength="1" /></div>
-          <div>
+          <div onclick="window.location.href = '../HTML/payment.html'">
             Tovább a fizetéshez<span class="material-symbols-outlined"
               >keyboard_arrow_right</span
             >

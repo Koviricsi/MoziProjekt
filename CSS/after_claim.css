@@ -2,6 +2,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-image: url(../!forras/kep/after_claimbg.jpg);
   background-size: cover;
 

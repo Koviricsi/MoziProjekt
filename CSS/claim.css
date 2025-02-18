@@ -19,6 +19,10 @@ main {
       display: inherit;
       justify-content: left;
       align-items: inherit;
+      background-color: var(--darkgray);
+      width: fit-content;
+      border-top-right-radius: 1.5cqw;
+      border-bottom-right-radius: 3cqw;
 
       h2 {
         color: var(--white);
@@ -29,8 +33,35 @@ main {
         padding-block: 3cqh;
         padding-inline: 4cqw;
         border-top-left-radius: 1.5cqw;
-        border-top-right-radius: 1.5cqw;
         position: relative;
+      }
+
+      select{
+        appearance: none;
+        color: var(--white);
+        font-family: "Lexend Deca", serif;
+        font-size: var(--medium-size);
+        background-color: var(--darkgray);
+        border: solid var(--lightblue) 0.2cqw;
+        padding-inline: 2cqw;
+        border-top-right-radius: 1.5cqw;
+        border-bottom-left-radius: 3cqw;
+        border-bottom-right-radius: 1.5cqw;
+        position: relative;
+        transition: all 0.2s;
+
+        &:is(:focus-visible, :active, :current) {
+          outline: none;
+          border: solid var(--purple) 0.2cqw;
+        }
+
+        option{
+          background-color: var(--darkgray);
+
+          &:is(:checked) {
+            background-color: var(--lightblue);
+          }
+        }
       }
     }
 

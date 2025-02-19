@@ -98,3 +98,8 @@ button:hover{
     padding-bottom: 0.7cqw;
     border-bottom: solid 0.3cqw var(--lightblue);
 }
+
+
+h5{
+    text-align: justify;
+}

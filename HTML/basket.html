@@ -20,6 +20,7 @@
 
     <script src="../JAVASCRIPT/default.js" defer></script>
     <script src="../JAVASCRIPT/basket.js" defer></script>
+    <script src="../JAVASCRIPT/payment.js" defer></script>
     <script
       src="https://kit.fontawesome.com/e0677ef9f1.js"
       crossorigin="anonymous"
@@ -59,8 +60,12 @@
     </nav>
 
     <main style="min-height: 100vh;">
-      <div id="container"><span>Kosara jelenleg üres.</span><span>Foglaljon az online felületen, hogy kifizetendő jegyei megjelenjenek itt.</span></div>
+      <div id="container"></div>
     </main>
+
+    <template id="default">
+      <span>Kosara jelenleg üres.</span><span>Foglaljon az online felületen, hogy kifizetendő jegyei megjelenjenek itt.</span>
+    </template>
 
     <template id="temp">
       <section id="ticketlist">
@@ -69,12 +74,15 @@
         <p><span>Teljes ár:</span><span id="costsum">1234</span></p>
         <section>
           <div>Kuponkód:<input type="text" maxlength="10" minlength="1" oninput="Sale(this.value);" onchange="Sale(this.value);" id="coupon"/></div>
-          <div onclick="window.location.href = '../HTML/payment.html'">
+          <div id="topayment" onclick="SkipPayment();">
             Tovább a fizetéshez<span class="material-symbols-outlined"  
               >keyboard_arrow_right</span
             >
           </div>
         </section>
+      </section>
+      <section id="error">
+        
       </section>
     </template>
 

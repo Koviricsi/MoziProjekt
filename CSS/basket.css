@@ -68,6 +68,23 @@ main {
           margin: 0;
         }
 
+        > button{
+          margin-top: 1cqh;
+          border: solid 0.2cqw hsl(from var(--purple) 10 200 l);
+          border-radius: 0.5cqw;
+          background-color: hsl(from var(--purple) 10 200 l / 0.2);
+          color: hsl(from var(--purple) 10 200 l);
+          font-family: 'Rubik', serif;
+          font-size: var(--tiny-size);
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover{
+            background-color: hsl(from var(--purple) 10 200 l);
+            color: var(--white);
+          }
+        }
+
         > h3:last-child {
           font-family: "Lexend Deca", serif;
           font-size: var(--medium-size);
@@ -80,7 +97,7 @@ main {
       }
     }
 
-    > section:last-child {
+    > section:nth-child(2) {
       width: 60%;
       margin-top: 1.5cqw;
       display: inherit;
@@ -159,6 +176,12 @@ main {
           }
         }
       }
+    }
+    section:nth-child(3){
+      font-size: var(--tiny-size);
+      font-family: 'Karla', serif;
+      margin-top: 1cqh;
+      color: hsl(from var(--purple) 10 200 l);
     }
   }
 }

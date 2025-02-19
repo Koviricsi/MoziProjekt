@@ -4,10 +4,18 @@ let allcost = 0;
 
 function LoadItems() {
   let tickets = JSON.parse(localStorage.getItem("tickets"));
+  let notempty = false;
 
-  if (Object.keys(tickets).length !== 0) {
+  Object.keys(tickets).forEach((title) => {
+    if (tickets[title][0].length > 0) {
+      notempty = true;
+    }
+  });
+
+  container.innerHTML = document.getElementById("default").innerHTML;
+
+  if (Object.keys(tickets).length !== 0 && notempty) {
     container.innerHTML = temp.innerHTML;
-    temp.remove();
 
     for (let title in tickets) {
       tickets[title][0].forEach((element) => {
@@ -41,6 +49,12 @@ function LoadItems() {
           (basketdate.getHours() - 1) +
           ":00";
 
+        let button = document.createElement("button");
+        button.innerHTML = "Törlés";
+        button.setAttribute("value", element);
+        button.setAttribute("title", title);
+        button.setAttribute("onclick", "Delete(this.value, this.title);");
+
         let h32 = document.createElement("h3");
         h32.innerHTML = (element.length - 1) * 2 * 1000;
         allcost += (element.length - 1) * 2 * 1000;
@@ -48,6 +62,7 @@ function LoadItems() {
         div.appendChild(h31);
         div.appendChild(p);
         div.appendChild(h4);
+        div.appendChild(button);
         div.appendChild(h32);
 
         ticketlist.appendChild(div);
@@ -59,26 +74,62 @@ function LoadItems() {
   }
 }
 
-function Sale(code){
+function Sale(code) {
   let coupons = JSON.parse(localStorage.getItem("kodok"));
   let costsum = document.getElementById("costsum");
   let allcost = localStorage.getItem("cost");
 
   for (let i = 0; i < coupons.length; i++) {
     let data = Object.entries(coupons[i])[0];
-    
-    if (code == data[0]){
-      costsum.innerHTML = 
-      "<span style='text-decoration: line-through;'>" + allcost + " Ft</span><br>" + "<span>" + (allcost-data[1]) + "</span>";  
-      localStorage.setItem("last_coupon", data[0]);
+
+    if (code == data[0]) {
+      if (data[1] > allcost) {
+        document.getElementById("error").innerHTML =
+          "<span>A megadott kupon értéke meghaladja a maximum beváltható értéket!</span>";
+        document
+          .getElementById("topayment")
+          .setAttribute("onclick", "SkipPayment(0)");
+      } else {
+        costsum.innerHTML =
+          "<span style='text-decoration: line-through;'>" +
+          allcost +
+          " Ft</span><br>" +
+          "<span>" +
+          (allcost - data[1]) +
+          "</span>";
+        document
+          .getElementById("topayment")
+          .setAttribute("onclick", "SkipPayment(" + data[1] + ")");
+        localStorage.setItem("last_coupon", data[0]);
+      }
       return;
-    }
-    else
-    {
+    } else {
+      document
+        .getElementById("topayment")
+        .setAttribute("onclick", "SkipPayment(0)");
       costsum.innerHTML = allcost;
       localStorage.setItem("last_coupon", "");
     }
+  }
+}
 
+function Delete(value, title) {
+  value = value.split(",");
+  let tickets = JSON.parse(localStorage.getItem("tickets"));
+
+  tickets[title][0].splice(tickets[title][0].indexOf(value), 1);
+
+  localStorage.setItem("tickets", JSON.stringify(tickets));
+  LoadItems();
+}
+
+function SkipPayment(value) {
+  let allcost = localStorage.getItem("cost");
+
+  if (allcost - value == 0) {
+    Pay();
+  } else {
+    window.location.href = "../HTML/payment.html";
   }
 }
 

@@ -144,7 +144,6 @@ function TicketManager() {
   numbers.push(selected_date);
   tickets[title][0].push(numbers);
   localStorage.setItem("tickets", JSON.stringify(tickets));
-  localStorage.setItem("new", title);
 }
 
 function SetDates() {

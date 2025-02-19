@@ -116,18 +116,13 @@ function Sale(code) {
 function Delete(value, title) {
   value = value.split(",");
 
-  for (let i = 0; i < value.length-1; i++) {
+  for (let i = 0; i < value.length - 1; i++) {
     value[i] = parseInt(value[i]);
   }
-  
 
   let tickets = JSON.parse(localStorage.getItem("tickets"));
 
   for (let i = 0; i < tickets[title][0].length; i++) {
-    console.log(JSON.stringify(value));
-    console.log(JSON.stringify(tickets[title][0][i]));
-    
-    
     if (JSON.stringify(tickets[title][0][i]) == JSON.stringify(value)) {
       console.log("b");
       tickets[title][0].splice(i, 1);

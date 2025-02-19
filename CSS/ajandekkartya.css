@@ -55,6 +55,7 @@ select{
     background-color: var(--darkgray);
     box-shadow: 0.3cqw 0.2cqw 2cqw var(--purple);
     transition: 1s;
+
 }
 
 
@@ -71,7 +72,7 @@ select:hover{
 
 button{
     min-width: 35%;
-    width: 15cqw;
+    width: 20cqw;
     height: 13%;
     font-size: var( --large-size);
     text-align: center;
@@ -84,6 +85,7 @@ button{
     box-shadow: 0.3cqw 0.2cqw 2cqw var(--lightblue);
     transition: 0.5s;
     cursor: pointer;
+
 }
 
 button:hover{
@@ -95,4 +97,9 @@ button:hover{
 .turorudi{
     padding-bottom: 0.7cqw;
     border-bottom: solid 0.3cqw var(--lightblue);
+}
+
+
+h5{
+    text-align: justify;
 }

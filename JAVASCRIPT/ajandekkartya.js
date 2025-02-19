@@ -32,7 +32,7 @@ let irdat = document.getElementById("banan");
 for (let i = 0; i < kod.length; i++) {
   let h3 = document.createElement("h3");
   h3.classList.add("kodocska");
-  h3.innerHTML = Object.keys(kod[i]);
+  h3.innerHTML = Object.keys(kod[i]) + " - " + Object.values(kod[i]) + " Ft";
   irdat.appendChild(h3);
 }
 

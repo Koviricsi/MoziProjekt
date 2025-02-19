@@ -77,7 +77,7 @@ function LoadItems() {
 function Sale(code) {
   let coupons = JSON.parse(localStorage.getItem("kodok"));
   let costsum = document.getElementById("costsum");
-  let allcost = localStorage.getItem("cost");
+  let allcost = JSON.parse(localStorage.getItem("cost"));
 
   for (let i = 0; i < coupons.length; i++) {
     let data = Object.entries(coupons[i])[0];
@@ -115,16 +115,23 @@ function Sale(code) {
 
 function Delete(value, title) {
   value = value.split(",");
+  value[0] = parseInt(value[0]);
+
   let tickets = JSON.parse(localStorage.getItem("tickets"));
 
-  tickets[title][0].splice(tickets[title][0].indexOf(value), 1);
+  for (let i = 0; i < tickets[title][0].length; i++) {
+    if (JSON.stringify(tickets[title][0][i]) == JSON.stringify(value)) {
+      tickets[title][0].splice(i, 1);
+      break;
+    }
+  }
 
   localStorage.setItem("tickets", JSON.stringify(tickets));
   LoadItems();
 }
 
 function SkipPayment(value) {
-  let allcost = localStorage.getItem("cost");
+  let allcost = JSON.parse(localStorage.getItem("cost"));
 
   if (allcost - value == 0) {
     Pay();
